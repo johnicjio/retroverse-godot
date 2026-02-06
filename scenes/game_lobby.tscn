@@ -1,0 +1,58 @@
+[gd_scene load_steps=2 format=3 uid="uid://game_lobby"]
+
+[ext_resource type="Script" path="res://scripts/game_lobby.gd" id="1"]
+
+[node name="GameLobby" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource("1")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color(0.0509804, 0.0901961, 0.160784, 1)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Sidebar" type="VBoxContainer" parent="HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="Label" type="Label" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "GAME SELECT"
+horizontal_alignment = 1
+
+[node name="LudoButton" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Ludo"
+
+[node name="SnakesButton" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Snakes & Ladders"
+
+[node name="TTTButton" type="Button" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "Tic-Tac-Toe"
+
+[node name="HSeparator" type="HSeparator" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+
+[node name="PlayersLabel" type="Label" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+text = "PLAYERS:"
+
+[node name="PlayersList" type="VBoxContainer" parent="HBoxContainer/Sidebar"]
+layout_mode = 2
+
+[node name="GameContainer" type="Control" parent="HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
