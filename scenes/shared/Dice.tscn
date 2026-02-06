@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://dice_component"]
+
+[ext_resource type="Script" path="res://scripts/shared/Dice.gd" id="1"]
+
+[node name="Dice" type="Button"]
+custom_minimum_size = Vector2(100, 100)
+text = "ROLL"
+script = ExtResource("1")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
